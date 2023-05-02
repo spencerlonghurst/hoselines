@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StepDownViewController.swift
 //  hoselines
 //
 //  Created by Spencer Longhurst on 5/1/23.
@@ -7,13 +7,12 @@
 
 import UIKit
 
-class HomeView: UIViewController {
+class StepDownViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Home!")
+        print("Step Down!")
     }
 
 
 }
-

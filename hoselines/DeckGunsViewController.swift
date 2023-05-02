@@ -1,19 +1,19 @@
 //
-//  ViewController.swift
+//  DeckGunsViewController.swift
 //  hoselines
 //
 //  Created by Spencer Longhurst on 5/1/23.
 //
 
+
 import UIKit
 
-class HomeView: UIViewController {
+class DeckGunsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Home!")
+        print("Deck Guns!")
     }
 
 
 }
-
