@@ -103,7 +103,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nKQ-aQ-xo3">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
+                                        <rect key="frame" x="-8" y="128" width="393" height="1200"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hose Diameter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0B-fk-fxr">
                                                 <rect key="frame" x="120" y="48" width="167" height="30"/>
@@ -144,7 +144,21 @@
                                                     <segment title="Fog"/>
                                                     <segment title="Smooth"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="SingleSegmentAction:" destination="4vg-y0-jHD" eventType="valueChanged" id="Fdf-G1-qE1"/>
+                                                </connections>
                                             </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smooth Bore Tip Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XC4-O1-zFM">
+                                                <rect key="frame" x="89" y="394" width="230" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fZb-0T-C8d">
+                                                <rect key="frame" x="120" y="432" width="167" height="92"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -175,6 +189,8 @@
                     <connections>
                         <outlet property="SingleDiameterPicker" destination="Uwn-wd-y3e" id="urB-IJ-Kue"/>
                         <outlet property="SingleLengthLabel" destination="7C4-qy-KKc" id="jxt-28-iZ1"/>
+                        <outlet property="SingleSegment" destination="dDY-Rp-FBp" id="g8f-YZ-cFn"/>
+                        <outlet property="SingleSmoothPicker" destination="fZb-0T-C8d" id="ojf-KX-QE6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ew8-Vk-Ido" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
