@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AC15FA42A00ABF9005524EC /* SingleDiameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC15FA32A00ABF9005524EC /* SingleDiameterViewController.swift */; };
 		1ACADA1F2A0083EA00DD0381 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACADA1E2A0083EA00DD0381 /* AppDelegate.swift */; };
 		1ACADA212A0083EA00DD0381 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACADA202A0083EA00DD0381 /* SceneDelegate.swift */; };
 		1ACADA232A0083EA00DD0381 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACADA222A0083EA00DD0381 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AC15FA32A00ABF9005524EC /* SingleDiameterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDiameterViewController.swift; sourceTree = "<group>"; };
 		1ACADA1B2A0083EA00DD0381 /* hoselines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hoselines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ACADA1E2A0083EA00DD0381 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ACADA202A0083EA00DD0381 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				1ACADA272A0083F100DD0381 /* Assets.xcassets */,
 				1ACADA292A0083F100DD0381 /* LaunchScreen.storyboard */,
 				1ACADA2C2A0083F100DD0381 /* Info.plist */,
+				1AC15FA32A00ABF9005524EC /* SingleDiameterViewController.swift */,
 			);
 			path = hoselines;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ACADA232A0083EA00DD0381 /* ViewController.swift in Sources */,
+				1AC15FA42A00ABF9005524EC /* SingleDiameterViewController.swift in Sources */,
 				1ACADA1F2A0083EA00DD0381 /* AppDelegate.swift in Sources */,
 				1ACADA212A0083EA00DD0381 /* SceneDelegate.swift in Sources */,
 			);
