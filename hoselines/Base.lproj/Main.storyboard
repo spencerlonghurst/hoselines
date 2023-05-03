@@ -96,28 +96,28 @@
             <objects>
                 <viewController id="4vg-y0-jHD" customClass="SingleDiameterViewController" customModule="hoselines" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6jf-4O-SO8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="975"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWA-O7-czh">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="975"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nKQ-aQ-xo3">
-                                        <rect key="frame" x="-8" y="128" width="393" height="1200"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKQ-aQ-xo3">
+                                        <rect key="frame" x="0.0" y="0.0" width="385" height="975"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hose Diameter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0B-fk-fxr">
-                                                <rect key="frame" x="120" y="48" width="167" height="30"/>
+                                                <rect key="frame" x="113" y="48" width="167" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uwn-wd-y3e">
-                                                <rect key="frame" x="120" y="77" width="167" height="92"/>
+                                                <rect key="frame" x="113" y="77" width="159" height="90"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             </pickerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hose Length" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5R-oV-fpI">
-                                                <rect key="frame" x="120" y="204" width="167" height="30"/>
+                                                <rect key="frame" x="113" y="202" width="167" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
@@ -138,39 +138,134 @@
                                                 </connections>
                                             </stepper>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-Rp-FBp">
-                                                <rect key="frame" x="120" y="323" width="167" height="32"/>
+                                                <rect key="frame" x="113" y="315" width="167" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <segments>
-                                                    <segment title="Fog"/>
                                                     <segment title="Smooth"/>
+                                                    <segment title="Fog"/>
                                                 </segments>
                                                 <connections>
                                                     <action selector="SingleSegmentAction:" destination="4vg-y0-jHD" eventType="valueChanged" id="Fdf-G1-qE1"/>
                                                 </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smooth Bore Tip Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XC4-O1-zFM">
-                                                <rect key="frame" x="89" y="394" width="230" height="30"/>
+                                                <rect key="frame" x="81" y="362" width="230" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fZb-0T-C8d">
-                                                <rect key="frame" x="120" y="432" width="167" height="92"/>
+                                                <rect key="frame" x="113" y="400" width="159" height="87"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             </pickerView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pressure at Nozzle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFj-gK-80O">
+                                                <rect key="frame" x="97" y="508" width="199" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="75" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="bLd-kQ-Sr8">
+                                                <rect key="frame" x="244" y="546" width="94" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="SinglePressureStepper:" destination="4vg-y0-jHD" eventType="valueChanged" id="rlu-WE-ggu"/>
+                                                </connections>
+                                            </stepper>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 PSI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWK-e4-lJ6">
+                                                <rect key="frame" x="91" y="546" width="80" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cG-tX-YWP">
+                                                <rect key="frame" x="170" y="609" width="54" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQG-OQ-cYQ">
+                                                <rect key="frame" x="91" y="647" width="80" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minimumValue="100" maximumValue="300" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="8JW-pp-gn6">
+                                                <rect key="frame" x="244" y="647" width="94" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="SingleGPMStepper:" destination="4vg-y0-jHD" eventType="valueChanged" id="i2y-DW-T4l"/>
+                                                </connections>
+                                            </stepper>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Elevation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Dv-MW-DS6">
+                                                <rect key="frame" x="148" y="699" width="98" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ef-eb-AE7">
+                                                <rect key="frame" x="91" y="737" width="80" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-1000" maximumValue="1000" stepValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="lY0-4G-Hgb">
+                                                <rect key="frame" x="244" y="737" width="94" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="SingleElevationStepper:" destination="4vg-y0-jHD" eventType="valueChanged" id="L0K-F2-xUH"/>
+                                                </connections>
+                                            </stepper>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Friction Loss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5x-gc-nf9">
+                                                <rect key="frame" x="128" y="806" width="137" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 PSI Loss" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP1-uT-8v3">
+                                                <rect key="frame" x="156" y="844" width="80" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pump Pressure" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnt-Od-A1B">
+                                                <rect key="frame" x="116" y="898" width="162" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 PSI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLY-8t-VMf">
+                                                <rect key="frame" x="158" y="936" width="80" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1200" id="Veh-Od-gGd"/>
+                                            <constraint firstAttribute="height" constant="975" id="lTn-Ts-0RU"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="nKQ-aQ-xo3" firstAttribute="leading" secondItem="iWA-O7-czh" secondAttribute="leading" id="5dW-Fm-jv8"/>
                                     <constraint firstItem="nKQ-aQ-xo3" firstAttribute="top" secondItem="iWA-O7-czh" secondAttribute="top" id="bVx-CF-jtF"/>
+                                    <constraint firstItem="nKQ-aQ-xo3" firstAttribute="top" secondItem="iWA-O7-czh" secondAttribute="top" id="dd8-cW-XCA"/>
                                     <constraint firstAttribute="bottom" secondItem="nKQ-aQ-xo3" secondAttribute="bottom" id="h27-LT-hLi"/>
                                     <constraint firstItem="nKQ-aQ-xo3" firstAttribute="leading" secondItem="iWA-O7-czh" secondAttribute="leading" id="l05-EH-M2D"/>
                                     <constraint firstAttribute="trailing" secondItem="nKQ-aQ-xo3" secondAttribute="trailing" id="lJm-ah-D1I"/>
+                                    <constraint firstAttribute="trailing" secondItem="nKQ-aQ-xo3" secondAttribute="trailing" id="o9w-c4-74g"/>
+                                    <constraint firstAttribute="bottom" secondItem="nKQ-aQ-xo3" secondAttribute="bottom" id="xzy-90-9ic"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -185,11 +280,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Single Diameter" id="bkQ-9V-9uv"/>
-                    <size key="freeformSize" width="393" height="1200"/>
+                    <size key="freeformSize" width="393" height="975"/>
                     <connections>
                         <outlet property="SingleDiameterPicker" destination="Uwn-wd-y3e" id="urB-IJ-Kue"/>
+                        <outlet property="SingleElevationLabel" destination="6ef-eb-AE7" id="HOe-oE-Hqo"/>
+                        <outlet property="SingleGPMLabel" destination="VQG-OQ-cYQ" id="tIX-4c-0TT"/>
                         <outlet property="SingleLengthLabel" destination="7C4-qy-KKc" id="jxt-28-iZ1"/>
+                        <outlet property="SinglePressureLabel" destination="tWK-e4-lJ6" id="yfy-CY-zZt"/>
                         <outlet property="SingleSegment" destination="dDY-Rp-FBp" id="g8f-YZ-cFn"/>
+                        <outlet property="SingleSmoothLabel" destination="XC4-O1-zFM" id="B2F-Ua-26c"/>
                         <outlet property="SingleSmoothPicker" destination="fZb-0T-C8d" id="ojf-KX-QE6"/>
                     </connections>
                 </viewController>

@@ -26,9 +26,54 @@ class SingleDiameterViewController: UIViewController {
     @IBOutlet weak var SingleSegment: UISegmentedControl!
     
     @IBAction func SingleSegmentAction(_ sender: UISegmentedControl) {
+        switch SingleSegment.selectedSegmentIndex
+        {
+        case 0:
+            SingleSmoothPicker.isUserInteractionEnabled = true
+            SingleSmoothPicker.alpha = 1
+            SingleSmoothLabel.alpha = 1
+        case 1:
+            SingleSmoothPicker.isUserInteractionEnabled = false
+            SingleSmoothPicker.alpha = 0.5
+            SingleSmoothLabel.alpha = 0.5
+        default:
+            break
+        }
+        
+        
     }
     
+    @IBOutlet weak var SingleSmoothLabel: UILabel!
     @IBOutlet weak var SingleSmoothPicker: UIPickerView!
+    
+
+    let potato = 0
+    
+    @IBOutlet weak var SinglePressureLabel: UILabel!
+    @IBAction func SinglePressureStepper(_ sender: UIStepper) {
+        SinglePressureLabel.text = String(sender.value)
+    }
+    
+    
+    @IBOutlet weak var SingleGPMLabel: UILabel!
+    
+    @IBAction func SingleGPMStepper(_ sender: UIStepper) {
+        SingleGPMLabel.text = String(sender.value)
+    }
+    
+    @IBOutlet weak var SingleElevationLabel: UILabel!
+    
+    @IBAction func SingleElevationStepper(_ sender: UIStepper) {
+        SingleElevationLabel.text = String(sender.value)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +84,10 @@ class SingleDiameterViewController: UIViewController {
         
         SingleSmoothPicker.dataSource = self
         SingleSmoothPicker.delegate = self
+        
+        SinglePressureLabel.text = "75"
+        SingleGPMLabel.text = "100"
+        
     }
     
     
