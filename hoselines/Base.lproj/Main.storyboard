@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QRA-bD-DBz">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <navigationController id="QRA-bD-DBz" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oQ2-1y-meb">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="50" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -29,50 +29,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeView" customModule="hoselines" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as8-3E-bPd">
-                                <rect key="frame" x="0.0" y="210" width="393" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Single Diameter Hoselines">
-                                    <color key="titleColor" red="1" green="0.33867709419999997" blue="0.24963255940000001" alpha="0.74841167119999996" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <segue destination="4vg-y0-jHD" kind="show" id="Cn4-st-XER"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0W-Ml-F5T">
-                                <rect key="frame" x="0.0" y="285" width="393" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Step Down Hoselines">
-                                    <color key="titleColor" red="1" green="0.33867709419999997" blue="0.24963255940000001" alpha="0.74841167119999996" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <segue destination="JbR-2g-ho2" kind="show" id="SrW-Ez-uWN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZo-X0-bK9">
-                                <rect key="frame" x="0.0" y="358" width="393" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Deck Guns/Elevated Masters">
-                                    <color key="titleColor" red="1" green="0.33867709419999997" blue="0.24963255940000001" alpha="0.74841167119999996" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BRT-AJ-dgk" kind="show" id="1M0-pj-ycS"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OmD-2B-2vR">
-                                <rect key="frame" x="-7" y="59" width="400" height="44"/>
+                                <rect key="frame" x="0.0" y="59" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="tintColor"/>
@@ -81,15 +42,76 @@
                                     <navigationItem title="Hoselines" id="ogD-ht-KHh"/>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as8-3E-bPd">
+                                <rect key="frame" x="8" y="325" width="359" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bnL-ld-qYT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" Single Diameter Hoselines ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4vg-y0-jHD" kind="show" id="Cn4-st-XER"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0W-Ml-F5T">
+                                <rect key="frame" x="8" y="383" width="359" height="46"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" Step Down Hoselines ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JbR-2g-ho2" kind="show" id="SrW-Ez-uWN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZo-X0-bK9">
+                                <rect key="frame" x="8" y="437" width="359" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="49F-4w-vvh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" Deck Guns/Elevated Masters ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BRT-AJ-dgk" kind="show" id="1M0-pj-ycS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="p0W-Ml-F5T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="290-fB-asb"/>
+                            <constraint firstItem="as8-3E-bPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6wL-yg-8Aa"/>
+                            <constraint firstItem="AZo-X0-bK9" firstAttribute="top" secondItem="p0W-Ml-F5T" secondAttribute="bottom" constant="8" id="8zi-EH-xKP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="as8-3E-bPd" secondAttribute="trailing" constant="8" id="AUe-0j-4jx"/>
+                            <constraint firstItem="p0W-Ml-F5T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JsW-il-Ddb"/>
+                            <constraint firstItem="p0W-Ml-F5T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="OUx-yY-8vH"/>
+                            <constraint firstItem="as8-3E-bPd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Q95-cB-UwW"/>
+                            <constraint firstItem="p0W-Ml-F5T" firstAttribute="top" secondItem="as8-3E-bPd" secondAttribute="bottom" constant="8" id="QF0-5c-5iM"/>
+                            <constraint firstItem="AZo-X0-bK9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bFO-ay-TrW"/>
+                            <constraint firstItem="AZo-X0-bK9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="i54-eb-X0L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p0W-Ml-F5T" secondAttribute="trailing" constant="8" id="nZL-rQ-oIq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AZo-X0-bK9" secondAttribute="trailing" constant="8" id="qsG-5c-WvK"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="DuN-gu-eNr"/>
+                    <navigationItem key="navigationItem" id="1To-VS-XJl"/>
+                    <connections>
+                        <outlet property="HomeDeck" destination="AZo-X0-bK9" id="WMd-hj-Ckx"/>
+                        <outlet property="HomeSingle" destination="as8-3E-bPd" id="riH-xL-wOg"/>
+                        <outlet property="HomeStep" destination="p0W-Ml-F5T" id="IS9-dD-vcX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.69465648854961" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="139.13043478260872" y="-2.6785714285714284"/>
         </scene>
         <!--Single Diameter-->
         <scene sceneID="fe6-Qo-LHB">
@@ -130,13 +152,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" maximumValue="2000" stepValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="egU-6C-b0n">
-                                                <rect key="frame" x="244" y="254" width="94" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <action selector="SingleLengthStepper:" destination="4vg-y0-jHD" eventType="valueChanged" id="oNG-f0-345"/>
-                                                </connections>
-                                            </stepper>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-Rp-FBp">
                                                 <rect key="frame" x="113" y="315" width="167" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -167,7 +182,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="75" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="bLd-kQ-Sr8">
-                                                <rect key="frame" x="244" y="546" width="94" height="32"/>
+                                                <rect key="frame" x="256" y="546" width="94" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
                                                     <action selector="SinglePressureStepper:" destination="4vg-y0-jHD" eventType="valueChanged" id="rlu-WE-ggu"/>
@@ -195,7 +210,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minimumValue="100" maximumValue="300" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="8JW-pp-gn6">
-                                                <rect key="frame" x="244" y="647" width="94" height="32"/>
+                                                <rect key="frame" x="-4444" y="647" width="94" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
                                                     <action selector="SingleGPMStepper:" destination="4vg-y0-jHD" eventType="valueChanged" id="i2y-DW-T4l"/>
@@ -216,7 +231,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-1000" maximumValue="1000" stepValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="lY0-4G-Hgb">
-                                                <rect key="frame" x="244" y="737" width="94" height="32"/>
+                                                <rect key="frame" x="256" y="737" width="94" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
                                                     <action selector="SingleElevationStepper:" destination="4vg-y0-jHD" eventType="valueChanged" id="L0K-F2-xUH"/>
@@ -250,6 +265,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" maximumValue="2000" stepValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="egU-6C-b0n">
+                                                <rect key="frame" x="256" y="254" width="94" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="SingleLengthStepper:" destination="4vg-y0-jHD" eventType="valueChanged" id="oNG-f0-345"/>
+                                                </connections>
+                                            </stepper>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -258,11 +280,15 @@
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="nKQ-aQ-xo3" secondAttribute="bottom" id="5ET-d8-GF3"/>
                                     <constraint firstItem="nKQ-aQ-xo3" firstAttribute="leading" secondItem="iWA-O7-czh" secondAttribute="leading" id="5dW-Fm-jv8"/>
+                                    <constraint firstItem="nKQ-aQ-xo3" firstAttribute="leading" secondItem="iWA-O7-czh" secondAttribute="leading" id="6Vq-7R-dDB"/>
+                                    <constraint firstItem="nKQ-aQ-xo3" firstAttribute="top" secondItem="iWA-O7-czh" secondAttribute="top" id="YFI-c4-JhP"/>
                                     <constraint firstItem="nKQ-aQ-xo3" firstAttribute="top" secondItem="iWA-O7-czh" secondAttribute="top" id="bVx-CF-jtF"/>
                                     <constraint firstItem="nKQ-aQ-xo3" firstAttribute="top" secondItem="iWA-O7-czh" secondAttribute="top" id="dd8-cW-XCA"/>
                                     <constraint firstAttribute="bottom" secondItem="nKQ-aQ-xo3" secondAttribute="bottom" id="h27-LT-hLi"/>
                                     <constraint firstItem="nKQ-aQ-xo3" firstAttribute="leading" secondItem="iWA-O7-czh" secondAttribute="leading" id="l05-EH-M2D"/>
+                                    <constraint firstAttribute="trailing" secondItem="nKQ-aQ-xo3" secondAttribute="trailing" id="l2c-WR-Ub3"/>
                                     <constraint firstAttribute="trailing" secondItem="nKQ-aQ-xo3" secondAttribute="trailing" id="lJm-ah-D1I"/>
                                     <constraint firstAttribute="trailing" secondItem="nKQ-aQ-xo3" secondAttribute="trailing" id="o9w-c4-74g"/>
                                     <constraint firstAttribute="bottom" secondItem="nKQ-aQ-xo3" secondAttribute="bottom" id="xzy-90-9ic"/>
@@ -294,14 +320,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ew8-Vk-Ido" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1194.6564885496182" y="-692.25352112676057"/>
+            <point key="canvasLocation" x="1194.6564885496182" y="-692.6056338028169"/>
         </scene>
         <!--Step Down-->
         <scene sceneID="Ek0-Ya-I3q">
             <objects>
                 <viewController id="JbR-2g-ho2" customClass="StepDownViewController" customModule="hoselines" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HMj-OZ-rGH">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="step down" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YuK-fw-8b8">
@@ -325,7 +351,7 @@
             <objects>
                 <viewController id="BRT-AJ-dgk" customClass="DeckGunsViewController" customModule="hoselines" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1tG-ra-X4n">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="deck guns" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hk4-78-gFe">
@@ -348,6 +374,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
