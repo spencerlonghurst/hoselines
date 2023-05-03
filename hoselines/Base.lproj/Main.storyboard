@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-738" y="-2"/>
         </scene>
-        <!--Home View-->
+        <!--Hoselines-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeView" customModule="hoselines" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,10 +37,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="tintColor"/>
-                                <color key="barTintColor" red="0.92128556969999997" green="0.31201831959999998" blue="0.22998287470000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <items>
-                                    <navigationItem title="Hoselines" id="ogD-ht-KHh"/>
-                                </items>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as8-3E-bPd">
                                 <rect key="frame" x="8" y="325" width="359" height="50"/>
@@ -102,7 +99,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AZo-X0-bK9" secondAttribute="trailing" constant="8" id="qsG-5c-WvK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1To-VS-XJl"/>
+                    <navigationItem key="navigationItem" title="Hoselines" id="1To-VS-XJl"/>
                     <connections>
                         <outlet property="HomeDeck" destination="AZo-X0-bK9" id="WMd-hj-Ckx"/>
                         <outlet property="HomeSingle" destination="as8-3E-bPd" id="riH-xL-wOg"/>
