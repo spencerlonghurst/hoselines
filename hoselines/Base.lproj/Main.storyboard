@@ -121,8 +121,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWA-O7-czh">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="975"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKQ-aQ-xo3">
-                                        <rect key="frame" x="0.0" y="0.0" width="385" height="975"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nKQ-aQ-xo3">
+                                        <rect key="frame" x="0.0" y="-105" width="385" height="975"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hose Diameter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0B-fk-fxr">
                                                 <rect key="frame" x="113" y="48" width="167" height="30"/>
@@ -142,7 +142,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7C4-qy-KKc">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50 Feet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7C4-qy-KKc">
                                                 <rect key="frame" x="91" y="254" width="80" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -185,7 +185,7 @@
                                                     <action selector="SinglePressureStepper:" destination="4vg-y0-jHD" eventType="valueChanged" id="rlu-WE-ggu"/>
                                                 </connections>
                                             </stepper>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 PSI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWK-e4-lJ6">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="75 PSI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWK-e4-lJ6">
                                                 <rect key="frame" x="91" y="546" width="80" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -199,20 +199,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQG-OQ-cYQ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100 GPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQG-OQ-cYQ">
                                                 <rect key="frame" x="91" y="647" width="80" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minimumValue="100" maximumValue="300" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="8JW-pp-gn6">
-                                                <rect key="frame" x="-4444" y="647" width="94" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <action selector="SingleGPMStepper:" destination="4vg-y0-jHD" eventType="valueChanged" id="i2y-DW-T4l"/>
-                                                </connections>
-                                            </stepper>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Elevation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Dv-MW-DS6">
                                                 <rect key="frame" x="148" y="699" width="98" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -220,7 +213,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ef-eb-AE7">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 Feet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ef-eb-AE7">
                                                 <rect key="frame" x="91" y="737" width="80" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -241,8 +234,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 PSI Loss" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP1-uT-8v3">
-                                                <rect key="frame" x="156" y="844" width="80" height="32"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 PSI Loss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP1-uT-8v3">
+                                                <rect key="frame" x="91" y="844" width="130" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -269,6 +262,22 @@
                                                     <action selector="SingleLengthStepper:" destination="4vg-y0-jHD" eventType="valueChanged" id="oNG-f0-345"/>
                                                 </connections>
                                             </stepper>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minimumValue="100" maximumValue="300" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="fJK-x0-CNV">
+                                                <rect key="frame" x="256" y="647" width="94" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="SingleGPMStepper:" destination="4vg-y0-jHD" eventType="valueChanged" id="PHI-IV-NZo"/>
+                                                </connections>
+                                            </stepper>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nG-qz-HN5">
+                                                <rect key="frame" x="255" y="844" width="95" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Calculate"/>
+                                                <connections>
+                                                    <action selector="FrictionLossButton:" destination="4vg-y0-jHD" eventType="touchUpInside" id="nYa-8Q-AVG"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -305,6 +314,8 @@
                     <navigationItem key="navigationItem" title="Single Diameter" id="bkQ-9V-9uv"/>
                     <size key="freeformSize" width="393" height="975"/>
                     <connections>
+                        <outlet property="FrictionLoss" destination="lP1-uT-8v3" id="f9b-mz-KVi"/>
+                        <outlet property="PumpPressure" destination="aLY-8t-VMf" id="X4d-1d-Aiz"/>
                         <outlet property="SingleDiameterPicker" destination="Uwn-wd-y3e" id="urB-IJ-Kue"/>
                         <outlet property="SingleElevationLabel" destination="6ef-eb-AE7" id="HOe-oE-Hqo"/>
                         <outlet property="SingleGPMLabel" destination="VQG-OQ-cYQ" id="tIX-4c-0TT"/>
@@ -317,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ew8-Vk-Ido" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1194.6564885496182" y="-692.6056338028169"/>
+            <point key="canvasLocation" x="1194.4000000000001" y="-692.73399014778329"/>
         </scene>
         <!--Step Down-->
         <scene sceneID="Ek0-Ya-I3q">
@@ -343,7 +354,7 @@
             </objects>
             <point key="canvasLocation" x="1972" y="-2"/>
         </scene>
-        <!--Deck Guns/Elevated Masters-->
+        <!--Deck Guns-->
         <scene sceneID="c9L-Fl-zpo">
             <objects>
                 <viewController id="BRT-AJ-dgk" customClass="DeckGunsViewController" customModule="hoselines" customModuleProvider="target" sceneMemberID="viewController">
@@ -361,7 +372,7 @@
                         <viewLayoutGuide key="safeArea" id="2wf-YY-e4I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Deck Guns/Elevated Masters" id="L8n-XH-cLM"/>
+                    <navigationItem key="navigationItem" title="Deck Guns" id="L8n-XH-cLM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0p-0w-Dka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
