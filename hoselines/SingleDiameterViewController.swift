@@ -9,8 +9,10 @@ import UIKit
 
 class SingleDiameterViewController: UIViewController {
     
-//    var HoseDiameter: Double
-    var HoseLength = 50.0
+    var HoseLength = 50
+    var GPM = 100
+    var hoseSize = 1.5
+    var FLCoefficent = 2.0
 
     let diameterSizes = ["1.5", "1.75", "2.5", "3", "4", "5" ]
     let smoothTipSizes = ["1/2", "5/8", "3/4", "7/8", "15/16", "1", "1 1/8", "1 1/4", "1 3/8", "1 1/2", "1 3/4", "2", "2 1/4", "2 1/2", "2 3/4", "3"]
@@ -24,10 +26,9 @@ class SingleDiameterViewController: UIViewController {
     @IBOutlet weak var SingleDiameterPicker: UIPickerView!
     @IBOutlet weak var SingleLengthLabel: UILabel!
     @IBAction func SingleLengthStepper(_ sender: UIStepper) {
+        HoseLength = Int(sender.value)
         SingleLengthLabel.text = "\(Int(sender.value)) Feet"
-        
-//        HoseLength = sender.value
-//        print(HoseLength)
+
     }
     
     @IBOutlet weak var SingleSegment: UISegmentedControl!
@@ -64,6 +65,7 @@ class SingleDiameterViewController: UIViewController {
     @IBOutlet weak var SingleGPMLabel: UILabel!
     
     @IBAction func SingleGPMStepper(_ sender: UIStepper) {
+        GPM = Int(sender.value)
         SingleGPMLabel.text = "\(Int(sender.value)) GPM"
     }
     
@@ -86,25 +88,35 @@ class SingleDiameterViewController: UIViewController {
             let B = ((flowRate/100)*(flowRate/100))
             let C = (hoseLength/100)
             let FL = Int(A * B * C)
-            print(FL)
             FrictionLoss.text = "\(FL) PSI Loss"
         }
         
-        frictionLoss(coefficent: 15.5, flowRate: 250, hoseLength: 100)
+        if hoseSize == 1.5 {
+            FLCoefficent = 24
+        } else if hoseSize == 1.75 {
+            FLCoefficent = 15.5
+        } else if hoseSize == 2.5 {
+            FLCoefficent = 2
+        } else if hoseSize == 3 {
+            FLCoefficent = 0.677
+        } else if hoseSize == 4 {
+            FLCoefficent = 0.2
+        } else if hoseSize == 5 {
+            FLCoefficent = 0.08
+        }
+        
+        frictionLoss(coefficent: FLCoefficent, flowRate: Double(GPM), hoseLength: Double(HoseLength))
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Single!")
         
         SingleDiameterPicker.dataSource = self
         SingleDiameterPicker.delegate = self
         
         SingleSmoothPicker.dataSource = self
         SingleSmoothPicker.delegate = self
-        
-//        print(SingleDiameterPicker)
-        
     }
     
     
@@ -134,8 +146,7 @@ extension SingleDiameterViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         if pickerView == SingleDiameterPicker {
-//            HoseDiameter = Double(diameterSizes[row])!
-//            print(HoseDiameter)
+            hoseSize = Double(diameterSizes[row])!
             return diameterSizes[row]
         } else if pickerView == SingleSmoothPicker {
             return smoothTipSizes[row]
