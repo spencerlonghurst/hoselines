@@ -142,7 +142,7 @@ class SingleDiameterViewController: UIViewController {
             let A = coefficent
             let B = ((flowRate/100)*(flowRate/100))
             let C = (hoseLength/100)
-            var FL = Int(A * B * C)
+            let FL = Int(A * B * C)
             FrictionLossInt = FL
             FrictionLoss.text = "\(FL) PSI Loss"
         }
