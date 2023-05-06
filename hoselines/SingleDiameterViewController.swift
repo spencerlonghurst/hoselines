@@ -5,7 +5,12 @@
 //  Created by Spencer Longhurst on 5/1/23.
 //
 
+//Elevation Pressure LOss = 0.5 * Height in Feet
+// Questions:
+// 1. Is the constant on the Discharge rate always 29.7?
+
 import UIKit
+import Foundation
 
 class SingleDiameterViewController: UIViewController {
     
@@ -13,6 +18,9 @@ class SingleDiameterViewController: UIViewController {
     var GPM = 100
     var hoseSize = 1.5
     var FLCoefficent = 2.0
+    var smoothBoreSize = "1/2"
+    var smoothBoreSizeDouble = 0.0
+    var nozzlePressure = 75
 
     let diameterSizes = ["1.5", "1.75", "2.5", "3", "4", "5" ]
     let smoothTipSizes = ["1/2", "5/8", "3/4", "7/8", "15/16", "1", "1 1/8", "1 1/4", "1 3/8", "1 1/2", "1 3/4", "2", "2 1/4", "2 1/2", "2 3/4", "3"]
@@ -40,10 +48,18 @@ class SingleDiameterViewController: UIViewController {
             SingleSmoothPicker.isUserInteractionEnabled = true
             SingleSmoothPicker.alpha = 1
             SingleSmoothLabel.alpha = 1
+            SingleGPMStepperOutlet.isUserInteractionEnabled = false
+            SingleGPMStepperOutlet.alpha = 0
+            SingleGPMButtonOutlet.isUserInteractionEnabled = true
+            SingleGPMButtonOutlet.alpha = 1
         case 1:
             SingleSmoothPicker.isUserInteractionEnabled = false
             SingleSmoothPicker.alpha = 0.5
             SingleSmoothLabel.alpha = 0.5
+            SingleGPMStepperOutlet.isUserInteractionEnabled = true
+            SingleGPMStepperOutlet.alpha = 1
+            SingleGPMButtonOutlet.isUserInteractionEnabled = false
+            SingleGPMButtonOutlet.alpha = 0
         default:
             break
         }
@@ -58,16 +74,75 @@ class SingleDiameterViewController: UIViewController {
     
     @IBOutlet weak var SinglePressureLabel: UILabel!
     @IBAction func SinglePressureStepper(_ sender: UIStepper) {
+        nozzlePressure = Int(sender.value)
         SinglePressureLabel.text = "\(Int(sender.value)) PSI"
     }
     
     
     @IBOutlet weak var SingleGPMLabel: UILabel!
     
+    @IBOutlet weak var SingleGPMStepperOutlet: UIStepper!
     @IBAction func SingleGPMStepper(_ sender: UIStepper) {
         GPM = Int(sender.value)
         SingleGPMLabel.text = "\(Int(sender.value)) GPM"
     }
+    
+    @IBAction func SingleGPMButton(_ sender: UIButton) {
+        
+        
+        if smoothBoreSize == "1/2" {
+            smoothBoreSizeDouble = 0.5
+        } else if smoothBoreSize == "5/8" {
+            smoothBoreSizeDouble = 0.625
+        } else if smoothBoreSize == "3/4" {
+            smoothBoreSizeDouble = 0.75
+        } else if smoothBoreSize == "7/8" {
+            smoothBoreSizeDouble = 0.875
+        } else if smoothBoreSize == "15/16" {
+            smoothBoreSizeDouble = 0.9375
+        } else if smoothBoreSize == "1" {
+            smoothBoreSizeDouble = 1.0
+        } else if smoothBoreSize == "1 1/8" {
+            smoothBoreSizeDouble = 1.125
+        } else if smoothBoreSize == "1 1/4" {
+            smoothBoreSizeDouble = 1.25
+        } else if smoothBoreSize == "1 3/8" {
+            smoothBoreSizeDouble = 1.375
+        } else if smoothBoreSize == "1 1/2" {
+            smoothBoreSizeDouble = 1.5
+        } else if smoothBoreSize == "1 3/4" {
+            smoothBoreSizeDouble = 1.75
+        } else if smoothBoreSize == "2" {
+            smoothBoreSizeDouble = 2.0
+        } else if smoothBoreSize == "2 1/4" {
+            smoothBoreSizeDouble = 2.25
+        } else if smoothBoreSize == "2.1/2" {
+            smoothBoreSizeDouble = 2.5
+        } else if smoothBoreSize == "2 3/4" {
+            smoothBoreSizeDouble = 2.75
+        } else if smoothBoreSize == "3" {
+            smoothBoreSizeDouble = 3.0
+        }
+        
+        
+        
+        
+        
+        func gpm(diameter: Double, pressure: Double){
+
+            let A = 29.7
+            let B = (diameter*diameter)
+            let C = sqrt(pressure)
+            let GallonsPer = Int(A * B * C)
+            SingleGPMLabel.text = "\(GallonsPer) GPM"
+        }
+        
+        
+        
+        gpm(diameter: smoothBoreSizeDouble, pressure: Double(nozzlePressure))
+    }
+    
+    @IBOutlet weak var SingleGPMButtonOutlet: UIButton!
     
     @IBOutlet weak var SingleElevationLabel: UILabel!
     
@@ -83,7 +158,7 @@ class SingleDiameterViewController: UIViewController {
     
     @IBAction func FrictionLossButton(_ sender: UIButton) {
         func frictionLoss(coefficent: Double, flowRate: Double, hoseLength: Double){
-//            let FL = coefficent + flowRate + hoseLength
+
             let A = coefficent
             let B = ((flowRate/100)*(flowRate/100))
             let C = (hoseLength/100)
@@ -117,6 +192,11 @@ class SingleDiameterViewController: UIViewController {
         
         SingleSmoothPicker.dataSource = self
         SingleSmoothPicker.delegate = self
+        
+        SingleGPMStepperOutlet.isUserInteractionEnabled = false
+        SingleGPMStepperOutlet.alpha = 0
+        SingleGPMButtonOutlet.isUserInteractionEnabled = true
+        SingleGPMButtonOutlet.alpha = 1.0
     }
     
     
@@ -149,6 +229,7 @@ extension SingleDiameterViewController: UIPickerViewDelegate {
             hoseSize = Double(diameterSizes[row])!
             return diameterSizes[row]
         } else if pickerView == SingleSmoothPicker {
+            smoothBoreSize = smoothTipSizes[row]
             return smoothTipSizes[row]
         } else {
             return diameterSizes[row]

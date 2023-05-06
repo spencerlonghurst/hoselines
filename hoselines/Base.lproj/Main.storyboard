@@ -240,9 +240,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 PSI Loss" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP1-uT-8v3">
-                                                <rect key="frame" x="60" y="808" width="80" height="32"/>
+                                                <rect key="frame" x="60" y="808" width="120" height="32"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="DsY-ac-B9r"/>
+                                                    <constraint firstAttribute="width" constant="120" id="DsY-ac-B9r"/>
                                                     <constraint firstAttribute="height" constant="32" id="Gji-YD-nbl"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -299,6 +299,15 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfg-dJ-5hN">
+                                                <rect key="frame" x="230" y="620" width="95" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Calculate"/>
+                                                <connections>
+                                                    <action selector="SingleGPMButton:" destination="4vg-y0-jHD" eventType="touchUpInside" id="6H3-Ma-vFe"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -375,7 +384,9 @@
                         <outlet property="PumpPressure" destination="aLY-8t-VMf" id="X4d-1d-Aiz"/>
                         <outlet property="SingleDiameterPicker" destination="Uwn-wd-y3e" id="urB-IJ-Kue"/>
                         <outlet property="SingleElevationLabel" destination="6ef-eb-AE7" id="HOe-oE-Hqo"/>
+                        <outlet property="SingleGPMButtonOutlet" destination="Mfg-dJ-5hN" id="pZd-4p-DPE"/>
                         <outlet property="SingleGPMLabel" destination="VQG-OQ-cYQ" id="tIX-4c-0TT"/>
+                        <outlet property="SingleGPMStepperOutlet" destination="fJK-x0-CNV" id="lzr-et-O7p"/>
                         <outlet property="SingleLengthLabel" destination="7C4-qy-KKc" id="jxt-28-iZ1"/>
                         <outlet property="SinglePressureLabel" destination="tWK-e4-lJ6" id="yfy-CY-zZt"/>
                         <outlet property="SingleSegment" destination="dDY-Rp-FBp" id="g8f-YZ-cFn"/>
