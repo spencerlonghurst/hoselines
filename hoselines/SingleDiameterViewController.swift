@@ -5,10 +5,6 @@
 //  Created by Spencer Longhurst on 5/1/23.
 //
 
-//Elevation Pressure LOss = 0.5 * Height in Feet
-// Questions:
-// 1. Is the constant on the Discharge rate always 29.7?
-
 import UIKit
 import Foundation
 
@@ -21,16 +17,12 @@ class SingleDiameterViewController: UIViewController {
     var smoothBoreSize = "1/2"
     var smoothBoreSizeDouble = 0.0
     var nozzlePressure = 75
+    var FrictionLossInt = 0
+    var ElevationFeet = 5.0
 
     let diameterSizes = ["1.5", "1.75", "2.5", "3", "4", "5" ]
     let smoothTipSizes = ["1/2", "5/8", "3/4", "7/8", "15/16", "1", "1 1/8", "1 1/4", "1 3/8", "1 1/2", "1 3/4", "2", "2 1/4", "2 1/2", "2 3/4", "3"]
     
-    
-    
-    
-    
-    
-
     @IBOutlet weak var SingleDiameterPicker: UIPickerView!
     @IBOutlet weak var SingleLengthLabel: UILabel!
     @IBAction func SingleLengthStepper(_ sender: UIStepper) {
@@ -63,21 +55,16 @@ class SingleDiameterViewController: UIViewController {
         default:
             break
         }
-        
-        
     }
     
     @IBOutlet weak var SingleSmoothLabel: UILabel!
     @IBOutlet weak var SingleSmoothPicker: UIPickerView!
-    
-
     
     @IBOutlet weak var SinglePressureLabel: UILabel!
     @IBAction func SinglePressureStepper(_ sender: UIStepper) {
         nozzlePressure = Int(sender.value)
         SinglePressureLabel.text = "\(Int(sender.value)) PSI"
     }
-    
     
     @IBOutlet weak var SingleGPMLabel: UILabel!
     
@@ -88,7 +75,6 @@ class SingleDiameterViewController: UIViewController {
     }
     
     @IBAction func SingleGPMButton(_ sender: UIButton) {
-        
         
         if smoothBoreSize == "1/2" {
             smoothBoreSizeDouble = 0.5
@@ -124,10 +110,6 @@ class SingleDiameterViewController: UIViewController {
             smoothBoreSizeDouble = 3.0
         }
         
-        
-        
-        
-        
         func gpm(diameter: Double, pressure: Double){
 
             let A = 29.7
@@ -147,22 +129,21 @@ class SingleDiameterViewController: UIViewController {
     @IBOutlet weak var SingleElevationLabel: UILabel!
     
     @IBAction func SingleElevationStepper(_ sender: UIStepper) {
+        ElevationFeet = (sender.value)
         SingleElevationLabel.text = "\(Int(sender.value)) Feet"
     }
     
-    
     @IBOutlet weak var FrictionLoss: UILabel!
-    
-    
-    @IBOutlet weak var PumpPressure: UILabel!
     
     @IBAction func FrictionLossButton(_ sender: UIButton) {
         func frictionLoss(coefficent: Double, flowRate: Double, hoseLength: Double){
+            WarningMessage.text = ""
 
             let A = coefficent
             let B = ((flowRate/100)*(flowRate/100))
             let C = (hoseLength/100)
-            let FL = Int(A * B * C)
+            var FL = Int(A * B * C)
+            FrictionLossInt = FL
             FrictionLoss.text = "\(FL) PSI Loss"
         }
         
@@ -182,7 +163,29 @@ class SingleDiameterViewController: UIViewController {
         
         frictionLoss(coefficent: FLCoefficent, flowRate: Double(GPM), hoseLength: Double(HoseLength))
         
+        PumpPressureButtonOutlet.isUserInteractionEnabled = true
+        PumpPressureButtonOutlet.alpha = 1
     }
+    
+    @IBOutlet weak var PumpPressureLabel: UILabel!
+    @IBOutlet weak var PumpPressureButtonOutlet: UIButton!
+    @IBAction func PumpPressureButton(_ sender: UIButton) {
+        if PumpPressureButtonOutlet.alpha == 0.5 {
+            WarningMessage.text = "You need to find out the Friction Loss first"
+        } else {
+            WarningMessage.text = ""
+            
+            let EL = 0.5 * ElevationFeet
+            
+            let PDP = Int(Double(nozzlePressure) + Double(FrictionLossInt) + EL)
+            FrictionLoss.text = "\(FrictionLossInt) PSI Loss"
+            PumpPressureLabel.text = "\(PDP) PSI Loss"
+            
+            PumpPressureButtonOutlet.alpha = 0.5
+        }
+    }
+    
+    @IBOutlet weak var WarningMessage: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -195,15 +198,15 @@ class SingleDiameterViewController: UIViewController {
         
         SingleGPMStepperOutlet.isUserInteractionEnabled = false
         SingleGPMStepperOutlet.alpha = 0
+        
         SingleGPMButtonOutlet.isUserInteractionEnabled = true
         SingleGPMButtonOutlet.alpha = 1.0
+        
+        PumpPressureButtonOutlet.alpha = 0.5
+        
+        WarningMessage.text = ""
     }
     
-    
-    
-    
-
-
 }
 
 extension SingleDiameterViewController: UIPickerViewDataSource {

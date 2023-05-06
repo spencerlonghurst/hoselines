@@ -290,39 +290,69 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 PSI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLY-8t-VMf">
-                                                <rect key="frame" x="60" y="902" width="80" height="32"/>
+                                                <rect key="frame" x="60" y="902" width="120" height="32"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="BB9-33-UEf"/>
+                                                    <constraint firstAttribute="width" constant="120" id="BB9-33-UEf"/>
                                                     <constraint firstAttribute="height" constant="32" id="gZm-uR-Lzt"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfg-dJ-5hN">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfg-dJ-5hN">
                                                 <rect key="frame" x="230" y="620" width="95" height="35"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="95" id="Eak-Cz-lDt"/>
+                                                    <constraint firstAttribute="height" constant="35" id="dlD-X9-kB9"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Calculate"/>
                                                 <connections>
                                                     <action selector="SingleGPMButton:" destination="4vg-y0-jHD" eventType="touchUpInside" id="6H3-Ma-vFe"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ti7-zk-stP">
+                                                <rect key="frame" x="230" y="902" width="95" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="95" id="78L-pi-ECm"/>
+                                                    <constraint firstAttribute="height" constant="32" id="yiC-4U-mjm"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Calculate"/>
+                                                <connections>
+                                                    <action selector="PumpPressureButton:" destination="4vg-y0-jHD" eventType="touchUpInside" id="OEj-rc-X9c"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You need to find out the Friction Loss first" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bu-BX-Nau">
+                                                <rect key="frame" x="60" y="946" width="265" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="265" id="5Db-jc-RqW"/>
+                                                    <constraint firstAttribute="height" constant="50" id="S4n-L6-MfG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="6nG-qz-HN5" firstAttribute="top" secondItem="C5x-gc-nf9" secondAttribute="bottom" constant="12" id="3qy-2J-HPp"/>
                                             <constraint firstItem="s0B-fk-fxr" firstAttribute="top" secondItem="nKQ-aQ-xo3" secondAttribute="top" constant="35" id="3yE-qe-GNz"/>
                                             <constraint firstItem="fZb-0T-C8d" firstAttribute="centerX" secondItem="nKQ-aQ-xo3" secondAttribute="centerX" id="4k5-tu-Tpc"/>
+                                            <constraint firstItem="4bu-BX-Nau" firstAttribute="centerX" secondItem="nKQ-aQ-xo3" secondAttribute="centerX" id="4pd-iE-66g"/>
                                             <constraint firstItem="XC4-O1-zFM" firstAttribute="centerX" secondItem="nKQ-aQ-xo3" secondAttribute="centerX" id="4ts-nV-08c"/>
+                                            <constraint firstItem="4bu-BX-Nau" firstAttribute="top" secondItem="aLY-8t-VMf" secondAttribute="bottom" constant="12" id="5Od-N1-Fu8"/>
+                                            <constraint firstAttribute="trailing" secondItem="ti7-zk-stP" secondAttribute="trailing" constant="60" id="5RO-jr-ae2"/>
                                             <constraint firstAttribute="trailing" secondItem="fJK-x0-CNV" secondAttribute="trailing" constant="60" id="6NU-6b-jMa"/>
                                             <constraint firstAttribute="trailing" secondItem="egU-6C-b0n" secondAttribute="trailing" constant="60" id="7Ys-H0-jj6"/>
                                             <constraint firstItem="VQG-OQ-cYQ" firstAttribute="top" secondItem="tWK-e4-lJ6" secondAttribute="bottom" constant="62" id="7mV-ZI-bBy"/>
                                             <constraint firstItem="C5x-gc-nf9" firstAttribute="centerX" secondItem="nKQ-aQ-xo3" secondAttribute="centerX" id="9QH-Jr-VAg"/>
                                             <constraint firstItem="6ef-eb-AE7" firstAttribute="leading" secondItem="nKQ-aQ-xo3" secondAttribute="leading" constant="60" id="BGf-tw-wBZ"/>
+                                            <constraint firstItem="ti7-zk-stP" firstAttribute="top" secondItem="gnt-Od-A1B" secondAttribute="bottom" constant="12" id="DZc-Cn-com"/>
                                             <constraint firstItem="O5R-oV-fpI" firstAttribute="centerX" secondItem="nKQ-aQ-xo3" secondAttribute="centerX" id="E7r-Po-ptJ"/>
                                             <constraint firstItem="s0B-fk-fxr" firstAttribute="centerX" secondItem="nKQ-aQ-xo3" secondAttribute="centerX" id="Epp-Mr-zYI"/>
                                             <constraint firstItem="fZb-0T-C8d" firstAttribute="top" secondItem="XC4-O1-zFM" secondAttribute="bottom" constant="12" id="GdZ-av-xB6"/>
+                                            <constraint firstItem="Mfg-dJ-5hN" firstAttribute="top" secondItem="bLd-kQ-Sr8" secondAttribute="bottom" constant="62" id="HNG-eB-HXD"/>
                                             <constraint firstItem="bLd-kQ-Sr8" firstAttribute="top" secondItem="XFj-gK-80O" secondAttribute="bottom" constant="12" id="HSY-5h-gSy"/>
                                             <constraint firstItem="lY0-4G-Hgb" firstAttribute="top" secondItem="8Dv-MW-DS6" secondAttribute="bottom" constant="12" id="JBq-qk-lJF"/>
                                             <constraint firstItem="tWK-e4-lJ6" firstAttribute="leading" secondItem="nKQ-aQ-xo3" secondAttribute="leading" constant="60" id="JZj-u8-J5T"/>
@@ -355,6 +385,7 @@
                                             <constraint firstItem="gnt-Od-A1B" firstAttribute="centerX" secondItem="nKQ-aQ-xo3" secondAttribute="centerX" id="vAd-hG-gi4"/>
                                             <constraint firstItem="8Dv-MW-DS6" firstAttribute="top" secondItem="fJK-x0-CNV" secondAttribute="bottom" constant="20" id="voB-Jp-b8K"/>
                                             <constraint firstItem="XFj-gK-80O" firstAttribute="top" secondItem="fZb-0T-C8d" secondAttribute="bottom" constant="20" id="wkJ-RR-c9e"/>
+                                            <constraint firstAttribute="trailing" secondItem="Mfg-dJ-5hN" secondAttribute="trailing" constant="60" id="xhe-ja-Xrq"/>
                                             <constraint firstItem="aLY-8t-VMf" firstAttribute="top" secondItem="gnt-Od-A1B" secondAttribute="bottom" constant="12" id="zWO-fH-sVX"/>
                                         </constraints>
                                     </view>
@@ -381,7 +412,8 @@
                     <size key="freeformSize" width="393" height="1075"/>
                     <connections>
                         <outlet property="FrictionLoss" destination="lP1-uT-8v3" id="f9b-mz-KVi"/>
-                        <outlet property="PumpPressure" destination="aLY-8t-VMf" id="X4d-1d-Aiz"/>
+                        <outlet property="PumpPressureButtonOutlet" destination="ti7-zk-stP" id="Oco-Dy-PPW"/>
+                        <outlet property="PumpPressureLabel" destination="aLY-8t-VMf" id="ets-fn-l9e"/>
                         <outlet property="SingleDiameterPicker" destination="Uwn-wd-y3e" id="urB-IJ-Kue"/>
                         <outlet property="SingleElevationLabel" destination="6ef-eb-AE7" id="HOe-oE-Hqo"/>
                         <outlet property="SingleGPMButtonOutlet" destination="Mfg-dJ-5hN" id="pZd-4p-DPE"/>
@@ -392,11 +424,12 @@
                         <outlet property="SingleSegment" destination="dDY-Rp-FBp" id="g8f-YZ-cFn"/>
                         <outlet property="SingleSmoothLabel" destination="XC4-O1-zFM" id="B2F-Ua-26c"/>
                         <outlet property="SingleSmoothPicker" destination="fZb-0T-C8d" id="ojf-KX-QE6"/>
+                        <outlet property="WarningMessage" destination="4bu-BX-Nau" id="s9y-of-vUP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ew8-Vk-Ido" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1194.4000000000001" y="-692.73399014778329"/>
+            <point key="canvasLocation" x="1193.4782608695652" y="-693.34239130434787"/>
         </scene>
         <!--Step Down-->
         <scene sceneID="Ek0-Ya-I3q">
