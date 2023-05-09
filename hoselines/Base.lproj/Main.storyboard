@@ -40,7 +40,7 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as8-3E-bPd">
-                                <rect key="frame" x="8" y="385" width="414" height="50"/>
+                                <rect key="frame" x="8" y="441" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bnL-ld-qYT"/>
@@ -54,56 +54,19 @@
                                     <segue destination="4vg-y0-jHD" kind="show" id="Cn4-st-XER"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0W-Ml-F5T">
-                                <rect key="frame" x="8" y="443" width="414" height="46"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title=" Step Down Hoselines ">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="JbR-2g-ho2" kind="show" id="SrW-Ez-uWN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZo-X0-bK9">
-                                <rect key="frame" x="8" y="497" width="414" height="50"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="49F-4w-vvh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title=" Deck Guns/Elevated Masters ">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BRT-AJ-dgk" kind="show" id="1M0-pj-ycS"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="p0W-Ml-F5T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="290-fB-asb"/>
                             <constraint firstItem="as8-3E-bPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6wL-yg-8Aa"/>
-                            <constraint firstItem="AZo-X0-bK9" firstAttribute="top" secondItem="p0W-Ml-F5T" secondAttribute="bottom" constant="8" id="8zi-EH-xKP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="as8-3E-bPd" secondAttribute="trailing" constant="8" id="AUe-0j-4jx"/>
-                            <constraint firstItem="p0W-Ml-F5T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JsW-il-Ddb"/>
-                            <constraint firstItem="p0W-Ml-F5T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="OUx-yY-8vH"/>
+                            <constraint firstItem="as8-3E-bPd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ofj-Lv-W3J"/>
                             <constraint firstItem="as8-3E-bPd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Q95-cB-UwW"/>
-                            <constraint firstItem="p0W-Ml-F5T" firstAttribute="top" secondItem="as8-3E-bPd" secondAttribute="bottom" constant="8" id="QF0-5c-5iM"/>
-                            <constraint firstItem="AZo-X0-bK9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bFO-ay-TrW"/>
-                            <constraint firstItem="AZo-X0-bK9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="i54-eb-X0L"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p0W-Ml-F5T" secondAttribute="trailing" constant="8" id="nZL-rQ-oIq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AZo-X0-bK9" secondAttribute="trailing" constant="8" id="qsG-5c-WvK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Hoselines" id="1To-VS-XJl"/>
                     <connections>
-                        <outlet property="HomeDeck" destination="AZo-X0-bK9" id="WMd-hj-Ckx"/>
                         <outlet property="HomeSingle" destination="as8-3E-bPd" id="riH-xL-wOg"/>
-                        <outlet property="HomeStep" destination="p0W-Ml-F5T" id="IS9-dD-vcX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -436,54 +399,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ew8-Vk-Ido" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1193.4782608695652" y="-693.34239130434787"/>
-        </scene>
-        <!--Step Down-->
-        <scene sceneID="Ek0-Ya-I3q">
-            <objects>
-                <viewController id="JbR-2g-ho2" customClass="StepDownViewController" customModule="hoselines" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="HMj-OZ-rGH">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="step down" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YuK-fw-8b8">
-                                <rect key="frame" x="148" y="365" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="r0y-u2-ZJm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Step Down" id="mlg-Xy-8BE"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pMg-LO-5Fa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1972" y="-2"/>
-        </scene>
-        <!--Deck Guns-->
-        <scene sceneID="c9L-Fl-zpo">
-            <objects>
-                <viewController id="BRT-AJ-dgk" customClass="DeckGunsViewController" customModule="hoselines" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1tG-ra-X4n">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="deck guns" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hk4-78-gFe">
-                                <rect key="frame" x="148" y="360" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="2wf-YY-e4I"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Deck Guns" id="L8n-XH-cLM"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r0p-0w-Dka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1195" y="684"/>
         </scene>
     </scenes>
     <resources>
